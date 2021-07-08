@@ -1,0 +1,139 @@
+A city is represented as two-dimensional rectangular matrix. The outer wall of the given matrix denotes the boundaries of the city. Citizens are dispersed in the city at different locations. They are either depicted by {a, c}. Corona Virus has already infected the city.
+
+The Corona Virus enters the city from coordinate (0, 0) and traverses along a diagonal path until it encounters a human. If it encounters a human, designated as a , its trajectory rotates anti clockwise (right to left) by 90 degrees. Similarly, if it encounters a human, designated as c , its trajectory rotates clockwise (left to right) by 90 degrees. After infecting the person, the virus continues to move along its diagonal path.
+
+During its traversal if it hits the boundary of the city for the first time, it rotates 90 degrees to reenter the city. However if it hits any of the boundary wall, the second time, the virus gets destroyed.
+
+You have to calculate the trajectory taken by the virus, print the city map where infected citizens can be found and finally report the number of safe and infected citizens. com.tcs.cv.automata.ei.middleware.DocxToHtmlConverter@720bf02:image1.gif
+
+Input
+An input matrix of 9 rows and 20 columns comprising of {*, a, c, . } characters where
+
+* denotes an element on the boundaries of the city
+
+a denotes citizen after encountering whom the virus trajectory changes by 90 degrees (anti clockwise direction)
+
+c denotes citizen after encountering whom the virus trajectory changes by 90 degrees (clockwise direction)
+
+. (dot) denotes empty location within the city
+
+Output
+Random number of lines each denoting the coordinates of the trajectory of the virus.
+
+From next line an output matrix of 9 rows and 20 columns comprising of {*, a, c, ., - } characters where
+
+* denotes an element on the boundaries of the city
+
+a denotes citizen after encountering whom the virus trajectory changes by 90 degrees (anti clockwise direction)
+
+c denotes citizen after encountering whom the virus trajectory changes by 90 degrees (clockwise direction)
+
+. (dot) denotes empty location within the city
+
+- denotes the location of the infected citizen
+
+And the next two lines print the number of safe and infected citizens in the city
+
+Refer Examples section for better understanding.
+
+Constraints
+0 <= x <= 20
+
+0 <= y <= 8
+
+The virus cannot hit the three corners (20, 8) (20, 0) (0, 8)
+
+Time Limit
+1
+
+
+Examples
+Example 1
+
+Input
+
+********************
+
+*....c.............*
+
+*...c..............*
+
+*c.................*
+
+*.............a....*
+
+*c.c...............*
+
+*.a................*
+
+*...........c......*
+
+********************
+
+Output
+
+0 0
+
+1 1
+
+2 2
+
+1 3
+
+2 4
+
+3 5
+
+4 6
+
+5 5
+
+6 4
+
+7 3
+
+8 2
+
+9 1
+
+10 0
+
+11 1
+
+12 2
+
+13 3
+
+14 4
+
+13 5
+
+12 6
+
+11 7
+
+10 8
+
+********************
+
+*....c.............*
+
+*...-..............*
+
+*c.................*
+
+*.............-....*
+
+*-.c...............*
+
+*.-................*
+
+*...........c......*
+
+********************
+
+safe=4
+
+infected=4
+
+Read more: https://www.texspert.com/2020/08/corona-virus-codevita-9-solution.html#ixzz6zvQliuyt
